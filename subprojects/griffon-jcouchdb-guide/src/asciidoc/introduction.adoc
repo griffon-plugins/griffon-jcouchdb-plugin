@@ -1,0 +1,7 @@
+
+[[_introduction]]
+= Introduction
+
+The link:https://code.google.com/p/jcouchdb/[Jcouchdb, window="_blank"] plugin enables lightweight access to Couchdb.
+This plugin does NOT provide domain classes nor dynamic finders like GORM does.
+

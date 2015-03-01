@@ -1,0 +1,9 @@
+
+:api_database_handler: link:api/griffon/plugins/jcouchdb/DatabaseHandler.html[DatabaseHandler, window="_blank"]
+:api_database_callback: link:api/griffon/plugins/jcouchdb/DatabaseCallback.html[DatabaseCallback, window="_blank"]
+:api_jcouchdb_aware: link:api/griffon/transform/JcouchdbAware.html[@JcouchdbAware, window="_blank"]
+:api_jcouchdb_bootstrap: link:api/griffon/plugins/jcouchdb/JcouchdbBootstrap.html[JcouchdbBootstrap, window="_blank"]
+
+:path_griffon_jcouchdb_core: {rootdir}/subprojects/griffon-jcouchdb-core
+:path_griffon_jcouchdb_groovy_compile: {rootdir}/subprojects/griffon-jcouchdb-groovy-compile
+

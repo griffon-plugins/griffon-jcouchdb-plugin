@@ -1,0 +1,33 @@
+apply plugin: 'groovy'
+apply plugin: 'org.codehaus.griffon.griffon'
+
+griffon {
+    disableDependencyResolution = false
+    includeGroovyDependencies = false
+    version = rootProject.griffonVersion
+}
+
+apply from: rootProject.file('gradle/code-coverage.gradle')
+
+dependencies {
+    compile 'org.codehaus.griffon.plugins:griffon-monitor-core:1.1.0'
+
+    compile('com.google.code.jcouchdb:jcouchdb:1.0.1-1') { exclude group: 'commons-logging', module: 'commons-logging' }
+    compile('net.sf.ezmorph:ezmorph:1.0.6') { exclude group: 'junit', module: 'junit' }
+
+    compile 'org.slf4j:jcl-over-slf4j:1.7.10'
+    testRuntime "org.slf4j:slf4j-simple:1.7.10"
+
+    testRuntime "org.codehaus.griffon:griffon-guice:${griffon.version}"
+    testRuntime "org.codehaus.griffon:griffon-groovy:${griffon.version}"
+
+    testCompile('org.codehaus.groovy.modules.http-builder:http-builder:0.7.2') {
+        exclude module: 'commons-logging'
+        exclude module: 'xml-apis'
+        exclude module: 'groovy'
+        exclude module: 'log4j'
+        exclude module: 'xercesImpl'
+    }
+}
+
+compileGroovy.enabled = false
